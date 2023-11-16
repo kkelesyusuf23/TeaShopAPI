@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TeaShopAPI.BusinessLayer\TeaShopAPI.BusinessLayer.csproj" />
+    <ProjectReference Include="..\TeaShopAPI.DtoLayer\TeaShopAPI.DtoLayer.csproj" />
   </ItemGroup>
 
 </Project>

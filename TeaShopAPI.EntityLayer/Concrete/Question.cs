@@ -8,7 +8,7 @@ namespace TeaShopAPI.EntityLayer.Concrete
 {
 	public class Question
 	{
-        public int QuestiınID { get; set; }
+        public int QuestionID { get; set; }
         public string QuestionDetail { get; set; }
         public string AnswerDetail { get; set; }
     }

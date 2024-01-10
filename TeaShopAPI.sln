@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopAPI", "TeaShopAPI\TeaShopAPI.csproj", "{9410E759-5020-4473-ACC8-68D62D522653}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopAPI", "TeaShopAPI\TeaShopAPI.csproj", "{9410E759-5020-4473-ACC8-68D62D522653}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopAPI.EntityLayer", "TeaShopAPI.EntityLayer\TeaShopAPI.EntityLayer.csproj", "{118BF7ED-FCF8-4156-94FC-692FCE4C224D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopAPI.EntityLayer", "TeaShopAPI.EntityLayer\TeaShopAPI.EntityLayer.csproj", "{118BF7ED-FCF8-4156-94FC-692FCE4C224D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopAPI.BusinessLayer", "TeaShopAPI.BusinessLayer\TeaShopAPI.BusinessLayer.csproj", "{41AF12F2-0579-4E76-AAB9-C7F1ABAF9A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopAPI.BusinessLayer", "TeaShopAPI.BusinessLayer\TeaShopAPI.BusinessLayer.csproj", "{41AF12F2-0579-4E76-AAB9-C7F1ABAF9A88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopAPI.DataAccess", "TeaShopAPI.DataAccess\TeaShopAPI.DataAccess.csproj", "{7FAF5525-4E90-4D27-A1E6-50CD5DF75C00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopAPI.DataAccess", "TeaShopAPI.DataAccess\TeaShopAPI.DataAccess.csproj", "{7FAF5525-4E90-4D27-A1E6-50CD5DF75C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopAPI.DtoLayer", "TeaShopAPI.DtoLayer\TeaShopAPI.DtoLayer.csproj", "{611A9218-7E0E-4F78-BA28-4C10291FAB3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaShopAPI.DtoLayer", "TeaShopAPI.DtoLayer\TeaShopAPI.DtoLayer.csproj", "{611A9218-7E0E-4F78-BA28-4C10291FAB3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaShopAPI.UI", "TeaShopAPI.UI\TeaShopAPI.UI.csproj", "{D107C588-50D5-4BFC-BB54-6028DE480CAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{611A9218-7E0E-4F78-BA28-4C10291FAB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611A9218-7E0E-4F78-BA28-4C10291FAB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611A9218-7E0E-4F78-BA28-4C10291FAB3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D107C588-50D5-4BFC-BB54-6028DE480CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D107C588-50D5-4BFC-BB54-6028DE480CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D107C588-50D5-4BFC-BB54-6028DE480CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D107C588-50D5-4BFC-BB54-6028DE480CAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TeaShopAPI.DtoLayer.DrinkDtos
 {
-	internal class UpdateDrinkDto
+	public class UpdateDrinkDto
 	{
-	}
+        public int DrinkID { get; set; }
+        public string DrinkName { get; set; }
+        public decimal DrinkPrice { get; set; }
+        public string DrinkImageURL { get; set; }
+    }
 }

@@ -19,6 +19,9 @@ builder.Services.AddScoped<IQuestionService, QuestionManager>();
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
+builder.Services.AddScoped<IStatisticDal, EfStatisticDal>();
+builder.Services.AddScoped<IStatisticService, StatisticManager>();
+
 builder.Services.AddDbContext<TeaContext>();
 
 

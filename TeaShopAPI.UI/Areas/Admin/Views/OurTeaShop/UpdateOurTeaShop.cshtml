@@ -1,0 +1,20 @@
+﻿@model TeaShopAPI.UI.Dtos.OurTeaShopDtos.UpdateOurTeaShopDto
+@{
+    ViewData["Title"] = "UpdateOurTeaShop";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="OurTeaShopID" />
+    <label>Gönderen</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Email</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <label>Konu</label>
+    <input type="text" asp-for="ImageURL" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

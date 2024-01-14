@@ -18,13 +18,13 @@ namespace TeaShopAPI.Controllers
 			_drinkService = drinkService;
 		}
 		[HttpGet]
-		public ActionResult DrinkList()
+		public IActionResult DrinkList()
 		{
 			var values = _drinkService.TGetListAll();
 			return Ok(values);
 		}
 		[HttpPost]
-		public ActionResult AddDrink(CreateDrinkDto createDrinkDto)
+		public IActionResult AddDrink(CreateDrinkDto createDrinkDto)
 		{
 			Drink drink = new Drink()
 			{

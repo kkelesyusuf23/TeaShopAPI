@@ -1,0 +1,58 @@
+﻿@model List<TeaShopAPI.UI.Dtos.MessageDtos.ResultMessageDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card">
+
+			<div class="card-header">
+				<h5>Gelen Mesaj İşlemleri</h5>
+				<div class="card-header-right">
+					<div class="btn-group card-option">
+						<button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="feather icon-more-horizontal"></i>
+						</button>
+						<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+							<li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+							<li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+							<li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+							<li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<table class="table table-borderless">
+					<tr>
+						<th>#</th>
+						<th>Gönderen</th>
+						<th>Email</th>
+						<th>Konu</th>
+						<th>Detay</th>
+						<th>Tarih</th>
+						<th>Sil</th>
+						<th>Güncelle</th>
+					</tr>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>@item.MessageID</td>
+							<td>@item.MessageSenderName</td>
+							<td>@item.MessageEmail</td>
+							<td>@item.MessageSubject</td>
+							<td>@item.MessageDetail</td>
+							<td>@item.MessageSendDate</td>
+							<td><a href="/Admin/Message/DeleteMessage/@item.MessageID" class="btn btn-outline-danger">Sil</a></td>
+							<td><a href="/Admin/Message/UpdateMessage/@item.MessageID" class="btn btn-outline-success">Güncelle</a></td>
+						</tr>
+					}
+				</table>
+				<a href="/Admin/Message/CreateMessage/" class="btn btn-outline-success">Mesaj Ekle</a>
+			</div>
+		</div>
+	</div>
+</div>
+

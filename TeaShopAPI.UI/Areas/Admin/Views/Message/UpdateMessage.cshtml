@@ -1,0 +1,23 @@
+﻿@model TeaShopAPI.UI.Dtos.MessageDtos.UpdateMessageDto
+@{
+    ViewData["Title"] = "UpdateMessage";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="MessageID" />
+    <label>Gönderen</label>
+    <input type="text" asp-for="MessageSenderName" class="form-control" />
+    <br />
+    <label>Email</label>
+    <input type="text" asp-for="MessageEmail" class="form-control" />
+    <br />
+    <label>Konu</label>
+    <input type="text" asp-for="MessageSubject" class="form-control" />
+    <br />
+    <label>Mesaj Detayı</label>
+    <input type="text" asp-for="MessageDetail" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

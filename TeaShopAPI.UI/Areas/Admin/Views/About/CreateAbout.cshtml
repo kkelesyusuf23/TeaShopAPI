@@ -1,0 +1,20 @@
+﻿@model TeaShopAPI.UI.Dtos.AboutDtos.CreateAboutDto
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <label>Başlık Giriniz</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Açıklama Giriniz</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <label>Resim Linkini Giriniz</label>
+    <input type="text" asp-for="ImageURl" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+
+

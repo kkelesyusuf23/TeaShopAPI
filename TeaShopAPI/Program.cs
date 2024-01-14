@@ -22,6 +22,21 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<IStatisticDal, EfStatisticDal>();
 builder.Services.AddScoped<IStatisticService, StatisticManager>();
 
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
+
+builder.Services.AddScoped<IOurTeaShopDal, EfOurTeaShopDal>();
+builder.Services.AddScoped<IOurTeaShopService, OurTeaShopManager>();
+
+builder.Services.AddScoped<IReservationDal, EfReservationDal>();
+builder.Services.AddScoped<IReservationService, ReservationManager>();
+
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderService, SliderManager>();
+
+builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
+builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
+
 builder.Services.AddDbContext<TeaContext>();
 
 

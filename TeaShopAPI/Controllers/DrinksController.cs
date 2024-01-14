@@ -61,5 +61,6 @@ namespace TeaShopAPI.Controllers
             _drinkService.TUpdate(drink);
             return Ok("Güncelleme işlemi başarılı bir şekilde gerçekleştirildi.");
         }
+
     }
 }

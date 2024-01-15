@@ -1,7 +1,7 @@
-﻿@model List<TeaShopAPI.UI.Dtos.ReservationDtos.ResultReservationDto>
+﻿@model List<TeaShopAPI.UI.Dtos.SliderDtos.ResultSliderDto>
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
 
 <div class="row">
@@ -9,7 +9,7 @@
 		<div class="card">
 
 			<div class="card-header">
-				<h5>Rezervasyon İşlemleri</h5>
+				<h5>Slider İşlemleri</h5>
 				<div class="card-header-right">
 					<div class="btn-group card-option">
 						<button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,27 +28,24 @@
 				<table class="table table-borderless">
 					<tr>
 						<th>#</th>
-						<th>Ad Soyad</th>
-						<th>Kişi Sayısı</th>
-						<th>Masa Numarası</th>
+						<th>Title</th>
+						<th>Resim</th>
 						<th>Sil</th>
 						<th>Güncelle</th>
 					</tr>
 					@foreach (var item in Model)
 					{
 						<tr>
-							<td>@item.ReservationID</td>
-							<td>@item.NameSurname</td>
-							<td>@item.PersonCount</td>
-							<td>@item.TableNo</td>
-							<td><a href="/Admin/Reservation/DeleteReservation/@item.ReservationID" class="btn btn-outline-danger">Sil</a></td>
-							<td><a href="/Admin/Reservation/UpdateReservation/@item.ReservationID" class="btn btn-outline-success">Güncelle</a></td>
+							<td>@item.SliderID</td>
+							<td>@item.Title</td>
+							<td>@item.ImageURL</td>
+							<td><a href="/Admin/Slider/DeleteSlider/@item.SliderID" class="btn btn-outline-danger">Sil</a></td>
+							<td><a href="/Admin/Slider/UpdateSlider/@item.SliderID" class="btn btn-outline-success">Güncelle</a></td>
 						</tr>
 					}
 				</table>
-				<a href="/Admin/Reservation/CreateReservation/" class="btn btn-outline-success">Rezervasyon Ekle</a>
+				<a href="/Admin/Slider/CreateSlider/" class="btn btn-outline-success">Slider Ekle</a>
 			</div>
 		</div>
 	</div>
 </div>
-

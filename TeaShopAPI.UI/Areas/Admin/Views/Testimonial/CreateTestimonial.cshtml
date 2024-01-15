@@ -1,0 +1,20 @@
+﻿@model TeaShopAPI.UI.Dtos.TestimonialDtos.CreateTestimonialDto
+@{
+    ViewData["Title"] = "CreateTestimonial";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <label>Ad Soyad</label>
+    <input type="text" asp-for="TestimonialName" class="form-control" />
+    <br />
+    <label>Yorum</label>
+    <input type="text" asp-for="TestimonialComment" class="form-control" />
+    <br />
+    <label>Resim</label>
+    <input type="text" asp-for="TestimonialImageURL" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+
+

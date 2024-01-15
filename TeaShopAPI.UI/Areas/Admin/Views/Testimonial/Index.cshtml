@@ -1,7 +1,7 @@
-﻿@model List<TeaShopAPI.UI.Dtos.ReservationDtos.ResultReservationDto>
+﻿@model List<TeaShopAPI.UI.Dtos.TestimonialDtos.ResultTestimonialDto>
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
 
 <div class="row">
@@ -9,7 +9,7 @@
 		<div class="card">
 
 			<div class="card-header">
-				<h5>Rezervasyon İşlemleri</h5>
+				<h5>Testimonial İşlemleri</h5>
 				<div class="card-header-right">
 					<div class="btn-group card-option">
 						<button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,26 +29,25 @@
 					<tr>
 						<th>#</th>
 						<th>Ad Soyad</th>
-						<th>Kişi Sayısı</th>
-						<th>Masa Numarası</th>
+						<th>Yorum</th>
+						<th>Resim</th>
 						<th>Sil</th>
 						<th>Güncelle</th>
 					</tr>
 					@foreach (var item in Model)
 					{
 						<tr>
-							<td>@item.ReservationID</td>
-							<td>@item.NameSurname</td>
-							<td>@item.PersonCount</td>
-							<td>@item.TableNo</td>
-							<td><a href="/Admin/Reservation/DeleteReservation/@item.ReservationID" class="btn btn-outline-danger">Sil</a></td>
-							<td><a href="/Admin/Reservation/UpdateReservation/@item.ReservationID" class="btn btn-outline-success">Güncelle</a></td>
+							<td>@item.TestimonialID</td>
+							<td>@item.TestimonialName</td>
+							<td>@item.TestimonialComment</td>
+							<td>@item.TestimonialImageURL</td>
+							<td><a href="/Admin/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
+							<td><a href="/Admin/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
 						</tr>
 					}
 				</table>
-				<a href="/Admin/Reservation/CreateReservation/" class="btn btn-outline-success">Rezervasyon Ekle</a>
+				<a href="/Admin/Testimonial/CreateTestimonial/" class="btn btn-outline-success">Testimonial Ekle</a>
 			</div>
 		</div>
 	</div>
 </div>
-

@@ -1,0 +1,15 @@
+﻿@model TeaShopAPI.UI.Dtos.SubscribeDtos.UpdateSubscribeDto
+@{
+    ViewData["Title"] = "UpdateSubscribe";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="SubscribeID" />
+    <label>Email</label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+
+

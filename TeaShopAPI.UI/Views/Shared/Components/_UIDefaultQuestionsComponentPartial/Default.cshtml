@@ -1,0 +1,39 @@
+﻿@model List<TeaShopAPI.UI.Dtos.QuestionDtos.ResultQuestionDto>
+
+<div class="frequently_section layout_padding">
+    <div class="container">
+        <h1 class="frequently_taital">Sıkça Sorulan Sorular</h1>
+        <p class="frequently_text">
+            It is a long established fact that a reader will beIt is a long established fact
+            that a reader will be
+        </p>
+        <div class="frequently_section_2 layout_padding">
+            <div class="bs-example">
+                <div class="accordion" id="accordionExample">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        string collapseId = $"collapse{i + 1}";
+                        <div class="card">
+                            <div class="card-header" id="heading@(i)">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link w-100" data-toggle="collapse"
+                                            data-target="#@(collapseId)">
+                                        <i class="fa fa-plus"></i>@Model[i].QuestionDetail
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="@(collapseId)" class="collapse" aria-labelledby="heading@(i)"
+                                 data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+                                        @Model[i].AnswerDetail
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

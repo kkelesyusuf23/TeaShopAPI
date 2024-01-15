@@ -1,0 +1,24 @@
+﻿@model List<TeaShopAPI.UI.Dtos.OurTeaShopDtos.ResultOurTeaShopDto>
+
+<div class="shop_section layout_padding">
+    <div id="my_slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @foreach(var item in Model)
+            {
+                <div class="carousel-item @(item.OurTeaShopID == 2 ? "active" : "")">
+                    <div class="container">
+                        <h1 class="shop_taital">@item.Title</h1>
+                        <p class="shop_text">@item.Description</p>
+                        <div><img src="@item.ImageURL" class="image_3"></div>
+                    </div>
+                </div>
+            }
+        </div>
+        <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" style="text-align: left;"></i>
+        </a>
+    </div>
+</div>

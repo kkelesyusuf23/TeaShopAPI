@@ -1,4 +1,4 @@
-﻿
+﻿@model TeaShopAPI.UI.Dtos.SubscribeDtos.CreateSubscribeDto
 @{
     Layout = null;
 }
@@ -39,7 +39,6 @@
 </head>
 
 <body>
-   <!-- header section start -->
    <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="logo"><a href="index.html"><img src="~/teab-1.0.0/images/logo.png"></a></div>
@@ -59,31 +58,32 @@
                 <a href="#"><img src="~/teab-1.0.0/images/search-icon.png"></a>
          </div>
       </nav>
-      <!-- banner section end -->
         @await Component.InvokeAsync("_UILayoutSliderComponentPartial")
       <div class="container">
             <div class="play_icon"><a href="#"><img src="~/teab-1.0.0/images/play-icon.png"></a></div>
       </div>
-      <!-- banner section end -->
    </div>
-   <!-- header section end -->
 
    @RenderBody()
 
-   <!-- footer section start -->
    <div class="footer_section layout_padding">
       <div class="container">
          <div class="newsletter_section">
             <div class="newsletter_left">
                <div class="footer_logo"><img src="images/footer-logo.png"></div>
             </div>
-            <div class="newsletter_right">
-               <h5 class="newsletter_taital">Subscribe Newsletter</h5>
-               <div class="subscribe_main">
-                  <input type="text" class="mail_text" placeholder="Enter your email" name="text">
-                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-               </div>
-            </div>
+                
+
+                <form method="post">
+                    <div class="newsletter_right">
+                        <h5 class="newsletter_taital">Çayın kokusunu al</h5>
+                        <div class="subscribe_main">
+                            <input type="text" class="mail_text form-control" placeholder="Email adresinizi giriniz" asp-for="Email">
+                            <div class="subscribe_bt"><button class="btn btn-outline-dark" style="background-color:#262626; color:orange;">Abone Ol</button></div>
+                        </div>
+                    </div>
+                </form>
+
          </div>
          <div class="footer_taital_main">
             <div class="row">
@@ -142,25 +142,21 @@
          </div>
       </div>
    </div>
-   <!-- footer section end -->
-   <!-- copyright section start -->
+
    <div class="copyright_section">
       <div class="container">
          <p class="copyright_text">Tüm Hakları Saklıdır. @DateTime.Now.Year | YuKee </a> </p>
          </p>
       </div>
    </div>
-   <!-- copyright section end -->
-   <!-- Javascript files-->
+
     <script src="~/teab-1.0.0/js/jquery.min.js"></script>
     <script src="~/teab-1.0.0/js/popper.min.js"></script>
     <script src="~/teab-1.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="~/teab-1.0.0/js/jquery-3.0.0.min.js"></script>
     <script src="~/teab-1.0.0/js/plugin.js"></script>
-   <!-- sidebar -->
     <script src="~/teab-1.0.0/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="~/teab-1.0.0/js/custom.js"></script>
-   <!-- javascript -->
     <script src="~/teab-1.0.0/js/owl.carousel.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    <script>
@@ -173,12 +169,9 @@
    </script>
    <script>
             $(document).ready(function () {
-               // Add minus icon for collapse element which is open by default
                $(".collapse.show").each(function () {
                   $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
                });
-
-               // Toggle plus minus icon on show hide of collapse element
                $(".collapse").on('show.bs.collapse', function () {
                   $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
                }).on('hide.bs.collapse', function () {

@@ -31,6 +31,7 @@ namespace TeaShopAPI.Controllers
                 PersonCount = createReservationDto.PersonCount,
                 TableNo = createReservationDto.TableNo,
                 NameSurname = createReservationDto.NameSurname,
+                ReservationTime = createReservationDto.ReservationTime,
             };
             _reservationService.TAdd(reservation);
             return Ok("Rezervasyon başarılı bir şekilde gerçekleştirildi.");
@@ -57,6 +58,7 @@ namespace TeaShopAPI.Controllers
                 NameSurname = updateReservationDto.NameSurname,
                 PersonCount = updateReservationDto.PersonCount,
                 TableNo = updateReservationDto.TableNo,
+                ReservationTime= updateReservationDto.ReservationTime,
             };
             _reservationService.TUpdate(reservation);
             return Ok("Güncelle işlemi başarılı bir şekilde gerçekleştirildi.");

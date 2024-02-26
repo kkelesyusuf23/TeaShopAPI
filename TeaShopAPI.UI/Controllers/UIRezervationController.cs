@@ -28,7 +28,11 @@ namespace TeaShopAPI.UI.Controllers
             var responseMessage = await client.PostAsync("https://localhost:7272/api/Reservations", content);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                ViewBag.SuccessMessage = "Rezervasyonunuz başarıyla yapıldı!";
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Rezervasyon yapılırken bir hata oluştu. Lütfen tekrar deneyin.";
             }
             return View();
         }
